@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>
+        {% block title %}
+        Интернет магазин
+        {% endblock %}
+    </title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <!-- Шапка -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <!-- Логотип -->
+                <img src="https://frontend-scripts.hb.bizmrg.com/assets/logo/geekbrains-logo-light.svg" alt="Логотип">
+
+                <!-- Меню -->
+                <ul class="nav nav-tabs justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">О сайте</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contacts/">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/user_lk/">Личный кабинет</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Левая колонка для дополнительного меню товаров -->
+            <div class="col-3">
+                <!-- Дополнительное меню -->
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cloth/">Одежда</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shoes/">Обувь</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/jacket/">Куртка</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Основной контент -->
+            <div class="col-6">
+                {% block content %}
+                    Страницы не заполнена
+                {% endblock %}
+            </div>
+
+            <!-- Правая колонка -->
+            <div class="col-3">
+                <!-- Место под банеры -->
+
+            </div>
+
+        </div>
+
+        <!-- Подвал -->
+        <div class="row fixed-bottom modal-footer" style="background-color: rgba(128, 128, 128, 0.9);">
+            <div class="col-12 text-center">
+                <p>Сайт создан на Flask</p>
+            </div>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>

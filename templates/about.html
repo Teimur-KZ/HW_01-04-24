@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ title }} - {{ super() }}
+{% endblock %}
+{% block content %}
+<table class="table table-striped">
+    {{ text | safe }}
+</table>
+{% endblock %}
